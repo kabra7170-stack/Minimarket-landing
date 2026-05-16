@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MiniMarket G2 — Sistema de Gestión Integral</title>
+<title>NEXSYS — Sistema de Gestión Integral</title>
 <meta name="description" content="Plataforma web integral para la gestión de minimarkets. Control de inventario, ventas, pedidos y automatizaciones en tiempo real.">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
@@ -181,7 +181,7 @@ footer p{font-size:12px;letter-spacing:1.5px;line-height:2;}
 <body>
 
 <nav>
-  <div class="nav-brand">MINI<span>MARKET</span> <span style="font-size:13px;opacity:.6;letter-spacing:2px">G2</span></div>
+  <div class="nav-brand">NEX<span>SYS</span></div>
   <div class="nav-links">
     <a href="#features">Solución</a>
     <a href="#modules">Módulos</a>
@@ -210,10 +210,9 @@ footer p{font-size:12px;letter-spacing:1.5px;line-height:2;}
       <div class="logo-frame">
         <div class="corner corner-tl"></div><div class="corner corner-tr"></div>
         <div class="corner corner-bl"></div><div class="corner corner-br"></div>
-        <canvas id="c" width="340" height="260"></canvas>
+        <img src="https://res.cloudinary.com/dutvxrjml/image/upload/v1778966199/nexsys_1_f0cpoe.png" alt="NEXSYS Logo" style="width:100%;max-width:300px;display:block;margin:0 auto;">
         <div id="logo-text">
           <div class="gold-line"><span></span><div class="diamond"></div><span></span></div>
-          <h1>MINIMARKET</h1>
           <p>SISTEMA DE GESTIÓN INTEGRAL</p>
           <div class="gold-line"><span></span><div class="diamond"></div><span></span></div>
           <div class="tags">
@@ -225,11 +224,11 @@ footer p{font-size:12px;letter-spacing:1.5px;line-height:2;}
     </div>
     <div class="hero-text">
       <div class="hero-badge"><span class="dot"></span>SISTEMA ACTIVO — EN PRODUCCIÓN · 2026</div>
-      <h2 class="hero-title">Gestión inteligente<br>para tu<br><span class="accent">MiniMarket</span></h2>
+      <h2 class="hero-title">Gestión inteligente<br>para tu<br><span class="accent">Negocio</span></h2>
       <p class="hero-sub">Control total · Automatización · Nube</p>
       <p class="hero-desc">Plataforma web integral para el control de inventario, ventas, pedidos a domicilio y automatizaciones en tiempo real. Publicada en la nube y accesible desde cualquier dispositivo.</p>
       <div class="hero-actions">
-        <a href="https://minimarket-backend-production-5dcf.up.railway.app/login.php" target="_blank" class="btn-gold">↗ Acceder al Sistema</a>
+        <a href="#acceso" class="btn-gold">↗ Acceder a NEXSYS</a>
         <a href="#features" class="btn-ghost">Ver Características</a>
       </div>
       <div class="hero-stats">
@@ -315,7 +314,7 @@ footer p{font-size:12px;letter-spacing:1.5px;line-height:2;}
       <div class="qr-card reveal">
         <div class="qr-label">ESCANEA PARA ACCEDER</div>
         <div class="qr-wrap"><div id="qrcode"></div></div>
-        <a class="qr-url" href="https://minimarket-backend-production-5dcf.up.railway.app/login.php" target="_blank">minimarket-backend-production-5dcf.up.railway.app</a>
+        <a class="qr-url" href="https://minimarket-backend-production-5dcf.up.railway.app/acceso.php" target="_blank">minimarket-backend-production-5dcf.up.railway.app/acceso.php</a>
         <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:20px;">
           <span style="font-size:10px;letter-spacing:1.5px;color:rgba(255,255,255,0.45);background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:5px 12px;border-radius:100px;font-family:'Rajdhani',sans-serif;">👔 ADMINISTRADOR</span>
           <span style="font-size:10px;letter-spacing:1.5px;color:rgba(255,255,255,0.45);background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:5px 12px;border-radius:100px;font-family:'Rajdhani',sans-serif;">📊 GERENTE</span>
@@ -400,11 +399,11 @@ footer p{font-size:12px;letter-spacing:1.5px;line-height:2;}
 </section>
 
 <footer>
-  <div class="f-brand">MINI<span>MARKET</span> G2</div>
+  <div class="f-brand">NEX<span>SYS</span></div>
   <div class="f-divider"></div>
   <p>Sistema de Gestión Integral · Publicado en Railway · 2026<br>Deurys C. Moquete · Nashla Fernández · Amin A. Casilla · Diego Heredia · Nashley Alin</p>
   <div class="f-links">
-    <a href="https://minimarket-backend-production-5dcf.up.railway.app/login.php" target="_blank">Acceder al Sistema</a>
+    <a href="https://minimarket-backend-production-5dcf.up.railway.app/acceso.php" target="_blank">Acceder a NEXSYS</a>
     <a href="https://api-fastapi-production-fa70.up.railway.app/docs" target="_blank">API Docs</a>
     <a href="#contacto">Contacto</a>
   </div>
@@ -413,49 +412,7 @@ footer p{font-size:12px;letter-spacing:1.5px;line-height:2;}
 <script>
 function toggleMenu(){document.getElementById('navMobile').classList.toggle('open');}
 
-/* LOGO 3D */
-const canvas=document.getElementById('c');const ctx=canvas.getContext('2d');const W=canvas.width,H=canvas.height;let t=0;
-function iso(gx,gy,gz,ox,oy,S){return[ox+(gx-gz)*S*0.866,oy-gy*S+(gx+gz)*S*0.5];}
-function drawBuilding(ox,oy,S){
-  function poly(pts,fill,alpha){ctx.beginPath();const p0=iso(pts[0][0],pts[0][1],pts[0][2],ox,oy,S);ctx.moveTo(p0[0],p0[1]);for(let i=1;i<pts.length;i++){const p=iso(pts[i][0],pts[i][1],pts[i][2],ox,oy,S);ctx.lineTo(p[0],p[1]);}ctx.closePath();ctx.globalAlpha=alpha??1;ctx.fillStyle=fill;ctx.fill();ctx.globalAlpha=1;}
-  function stroke(pts,color,lw,alpha){ctx.beginPath();const p0=iso(pts[0][0],pts[0][1],pts[0][2],ox,oy,S);ctx.moveTo(p0[0],p0[1]);for(let i=1;i<pts.length;i++){const p=iso(pts[i][0],pts[i][1],pts[i][2],ox,oy,S);ctx.lineTo(p[0],p[1]);}ctx.closePath();ctx.globalAlpha=alpha??1;ctx.strokeStyle=color;ctx.lineWidth=lw;ctx.stroke();ctx.globalAlpha=1;}
-  ctx.beginPath();ctx.ellipse(ox,oy+8,S*1.4,S*0.35,0,0,Math.PI*2);ctx.fillStyle='#000';ctx.globalAlpha=0.35+0.05*Math.sin(t*0.04);ctx.fill();ctx.globalAlpha=1;
-  poly([[1,0,0],[1,0,1],[1,1.3,1],[1,1.3,0]],'#0d3880');stroke([[1,0,0],[1,0,1],[1,1.3,1],[1,1.3,0]],'#42a5f5',0.5,0.4);
-  poly([[0,0,0],[1,0,0],[1,1.3,0],[0,1.3,0]],'#1565c0');stroke([[0,0,0],[1,0,0],[1,1.3,0],[0,1.3,0]],'#64b5f6',0.5,0.5);
-  poly([[0.12,0.2,0],[0.44,0.2,0],[0.44,0.72,0],[0.12,0.72,0]],'#90caf9',0.85);
-  poly([[0.55,0,0],[0.88,0,0],[0.88,0.8,0],[0.55,0.8,0]],'#1565c0');stroke([[0.55,0,0],[0.88,0,0],[0.88,0.8,0],[0.55,0.8,0]],'#42a5f5',0.5,0.5);
-  poly([[-0.08,1.3,-0.08],[1.08,1.3,-0.08],[1.08,1.3,1.08],[-0.08,1.3,1.08]],'#1976d2');stroke([[-0.08,1.3,-0.08],[1.08,1.3,-0.08],[1.08,1.3,1.08],[-0.08,1.3,1.08]],'#90caf9',0.7,0.55);
-  poly([[-0.08,1.3,-0.08],[1.08,1.3,-0.08],[1.08,1.35,-0.08],[-0.08,1.35,-0.08]],'#ffc107',0.9);
-  poly([[-0.06,1.4,-0.06],[1.06,1.4,-0.06],[1.06,1.65,-0.06],[-0.06,1.65,-0.06]],'#ffc107');
-  const sm=iso(0.5,1.52,-0.06,ox,oy,S);ctx.font='bold 8px Arial';ctx.fillStyle='#0a1628';ctx.textAlign='center';ctx.fillText('MINI MARKET',sm[0],sm[1]+3);
-  const ab=iso(0.5,1.65,-0.06,ox,oy,S);const at=[ab[0],ab[1]-24];
-  ctx.beginPath();ctx.moveTo(ab[0],ab[1]);ctx.lineTo(at[0],at[1]);ctx.strokeStyle='#42a5f5';ctx.lineWidth=1.2;ctx.globalAlpha=0.7;ctx.stroke();ctx.globalAlpha=1;
-  const glow=0.6+0.4*Math.sin(t*0.08);
-  ctx.beginPath();ctx.arc(at[0],at[1],5+glow*2,0,Math.PI*2);ctx.fillStyle='#ffc107';ctx.globalAlpha=0.25*glow;ctx.fill();ctx.globalAlpha=1;
-  ctx.beginPath();ctx.arc(at[0],at[1],4,0,Math.PI*2);ctx.fillStyle='#ffc107';ctx.fill();
-  ctx.beginPath();ctx.arc(at[0],at[1],2,0,Math.PI*2);ctx.fillStyle='#fff9c4';ctx.fill();
-  const bc=['#ffc107','#e53935','#ffc107','#1e88e5','#ffc107','#e53935','#ffc107'];
-  const rf=iso(-0.08,1.3,-0.08,ox,oy,S);const rr=iso(1.08,1.3,-0.08,ox,oy,S);
-  for(let i=0;i<bc.length;i++){const f=i/(bc.length-1);const bx=rf[0]+(rr[0]-rf[0])*f;const by=rf[1]+(rr[1]-rf[1])*f;const sw=3*Math.sin(t*0.07+i*0.7);ctx.beginPath();ctx.moveTo(bx,by);ctx.lineTo(bx+5+sw,by+8);ctx.lineTo(bx-5+sw,by+8);ctx.closePath();ctx.fillStyle=bc[i];ctx.globalAlpha=0.9;ctx.fill();ctx.globalAlpha=1;}
-}
-function logoFrame(){
-  ctx.clearRect(0,0,W,H);ctx.fillStyle='#06101f';ctx.fillRect(0,0,W,H);
-  ctx.strokeStyle='#fff';ctx.lineWidth=0.3;ctx.globalAlpha=0.025;
-  for(let x=0;x<W;x+=20){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke();}
-  for(let y=0;y<H;y+=20){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke();}
-  ctx.globalAlpha=1;
-  const ox=W/2-10,oy=H/2+28,S=52;
-  const r=80+8*Math.sin(t*0.04);const g=ctx.createRadialGradient(ox,oy,0,ox,oy,r);
-  g.addColorStop(0,'rgba(25,118,210,0.22)');g.addColorStop(1,'rgba(25,118,210,0)');
-  ctx.beginPath();ctx.arc(ox,oy,r,0,Math.PI*2);ctx.fillStyle=g;ctx.fill();
-  for(let i=0;i<6;i++){const a=(t*0.018)+(i/6)*Math.PI*2;const px=ox+100*Math.cos(a);const py=oy+38*Math.sin(a)-26;ctx.beginPath();ctx.arc(px,py,1.5,0,Math.PI*2);ctx.fillStyle='#42a5f5';ctx.globalAlpha=0.3+0.3*Math.abs(Math.sin(a));ctx.fill();ctx.globalAlpha=1;}
-  const fy=oy+4*Math.sin(t*0.035);const rot=0.015*Math.sin(t*0.02);
-  ctx.save();ctx.translate(ox,fy);ctx.rotate(rot);drawBuilding(0,0,S);ctx.restore();
-  const stars=[[20,20,1.2],[300,12,0.8],[330,36,1],[15,180,0.7],[340,70,0.6],[8,110,1],[320,180,0.5],[336,130,0.7]];
-  for(const[sx,sy,sr]of stars){const flick=0.5+0.5*Math.sin(t*0.05+sx);ctx.beginPath();ctx.arc(sx,sy,sr,0,Math.PI*2);ctx.fillStyle='#fff';ctx.globalAlpha=flick*0.8;ctx.fill();ctx.globalAlpha=1;}
-  t++;requestAnimationFrame(logoFrame);
-}
-logoFrame();
+/* Logo imagen - canvas removido */
 
 /* SMOKE */
 const sc=document.getElementById('smoke');
@@ -466,7 +423,7 @@ function smokeFrame(){sctx.clearRect(0,0,sc.width,sc.height);for(const p of part
 smokeFrame();
 
 /* QR */
-new QRCode(document.getElementById('qrcode'),{text:'https://minimarket-backend-production-5dcf.up.railway.app/login.php',width:180,height:180,colorDark:'#1F4E79',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.H});
+new QRCode(document.getElementById('qrcode'),{text:'https://minimarket-backend-production-5dcf.up.railway.app/acceso.php',width:180,height:180,colorDark:'#1F4E79',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.H});
 
 /* MENSAJES API */
 const API_URL='https://api-fastapi-production-fa70.up.railway.app';
